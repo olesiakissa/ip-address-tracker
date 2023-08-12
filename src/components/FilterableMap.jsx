@@ -1,8 +1,9 @@
 import 'leaflet/dist/leaflet.css'
 import '../index.css'
 import { useEffect, useState } from 'react'
-import { isIP } from 'is-ip';
-import Map from './Map';
+import { isIP } from 'is-ip'
+import Map from './Map'
+import Error from './Error'
 
 const FilterableMap = () => {
   
@@ -154,17 +155,7 @@ const FilterableMap = () => {
         />
     }
 
-    { fetchError && (
-      <article id='error-container'>
-        <h2 id='error-header' data-shadow='OOPS!'>
-          OOPS!
-        </h2>
-        <section id='error-text'>
-          <p>Something went wrong while processing your request.</p>
-          <p>Please, check the input and try again!</p>
-        </section>
-      </article>
-    )}
+    { fetchError && <Error />}
               
     </main>
   )
