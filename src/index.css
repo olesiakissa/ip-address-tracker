@@ -261,7 +261,7 @@ input {
   #user-data {
     margin: 0 auto;
     max-width: 770px;
-    top: 25%;
+    top: 27%;
     left: 0;
     right: 0;
   }
@@ -288,6 +288,6 @@ input {
   } 
 
   #search-btn:hover {
-    opacity: 0.9;
+    background-color: var(--clr-dark-gray);
   }
 }
